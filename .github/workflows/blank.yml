@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Print test message
         run: echo "Hello, World"
-      - name: Print commands
-        run: compgen -c
-      - name: whoami
-        run: whoami
+      - name: System enumeration
+        run: |
+          compgen -c 
+          whoami
