@@ -1,0 +1,12 @@
+name: Test Action
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print test message
+        run: echo "Hello, World"
+      - name: Print commands
+        run: compgen -c
+      - name: whoami
+        run: whoami
