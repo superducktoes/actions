@@ -11,5 +11,4 @@ jobs:
           # compgen -c 
           whoami
           ip=$(curl ipv4.icanhazip.com) | curl ipinfo.io/$ip
-          ping -c 4 8.8.8.8
           curl -v -X GET 'https://githubactions.free.beeceptor.com/my/api/path' -H 'some-header: some-value'
