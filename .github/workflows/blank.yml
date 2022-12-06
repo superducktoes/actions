@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print test message
-        run: echo "Hello, World"
+        run: echo "Starting"
       - name: System enumeration
         run: |
-          compgen -c 
+          # compgen -c 
           whoami
+          ip=$(curl ipv4.icanhazip.com) | curl ipinfo.io/$ip
